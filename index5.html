@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Landing Page</title>
+    <link rel="stylesheet" href="styles5.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div id="menu-icon">
+            <a class="logo">Burger Zone</a>
+            <img src="BurgerZone-Icon.jpg" class="logo-img" alt="Burger Zone Logo">
+        </div>
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#order">Menu</a></li>
+            <li><a href="#payment">Payment</a></li>
+            <li><a href="#review">Review</a></li>
+        </ul>
+    </header>
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+        <div class="home-text">
+            <h1>Welcome to Burger Zone!!</h1>
+            <h2>
+                Buy the dishes soon and get <br />
+                exciting prices
+            </h2>
+        </div>
+        <div class="home-img">
+            <img src="BurgerEating.avif" alt="Burger Eating">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-text">
+            <span>About Us</span>
+            <h2>The Best Burger Shop in the World</h2>
+            
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="order" id="order">
+        <div class="heading">
+            <span>Menu</span>
+            <h2>Here are the exciting dishes</h2>
+        </div>
+        <div class="menu-container">
+            <!-- Box 1 -->
+            <div class="box">
+                <div class="box-img">
+                    <img src="Veg-Burger.jpg" id="veg-burger-image" alt="Veg Burger">
+                    <div class="overlay">
+                        <button class="add-button" data-burger="veg">+</button>
+                        <span id="veg-order-count">0</span>
+                        <button class="remove-button" data-burger="veg">x</button>
+                    </div>
+                </div>
+                <h2>Veg Burger</h2>
+                <span>Rs.190</span>
+                <i class="bx bx-cart-alt"></i>
+            </div>
+            <!-- Box 2 -->
+            <div class="box">
+                <div class="box-img">
+                    <img src="Cheese-Burger.webp" id="cheese-burger-image" alt="Cheese Burger">
+                    <div class="overlay">
+                        <button class="add-button" data-burger="cheese">+</button>
+                        <span id="cheese-order-count">0</span>
+                        <button class="remove-button" data-burger="cheese">x</button>
+                    </div>
+                </div>
+                <h2>Cheese Burger</h2>
+                <span>Rs.220</span>
+                <i class="bx bx-cart-alt"></i>
+            </div>
+            <!-- Box 3 -->
+            <div class="box">
+                <div class="box-img">
+                    <img src="PattyMeltBurger.jpg" id="patty-burger-image" alt="Patty Melt Burger">
+                    <div class="overlay">
+                        <button class="add-button" data-burger="patty">+</button>
+                        <span id="patty-order-count">0</span>
+                        <button class="remove-button" data-burger="patty">x</button>
+                    </div>
+                </div>
+                <h2>Patty-melt Burger</h2>
+                <span>Rs.220</span>
+                <i class="bx bx-cart-alt"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Section -->
+    <section class="payment" id="payment">
+        <div class="heading">
+            <span>Payments</span>
+            <h2>Pay here and get your favourite dishes</h2>
+        </div>
+        <div class="payment-container">
+            <div class="login-container" id="login-container">
+                <p class="total-amount-message" id="total-amount-message">Pay 0.00</p>
+                <label for="username">Username:</label>
+                <input type="text" id="username" placeholder="Username">
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Password">
+                <button id="login-button">Login</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Review Section -->
+    <section class="review" id="review">
+        <div class="heading">
+            <span>Review</span>
+            <h2>Give Us Your Feedback</h2>
+        </div>
+        <div class="review-container">
+            <div class="stars" id="stars">
+                <span class="star" data-value="1">&#9733;</span>
+                <span class="star" data-value="2">&#9733;</span>
+                <span class="star" data-value="3">&#9733;</span>
+                <span class="star" data-value="4">&#9733;</span>
+                <span class="star" data-value="5">&#9733;</span>
+            </div>
+            <button id="submit-rating">Submit Rating</button>
+            <p id="submit-message" class="submit-message" style="display: none;">Response is submitted</p>
+            <p class="average-rating">Average Rating: <span id="average-rating">0</span></p>
+        </div>
+    </section>
+
+    <script src="script5.js"></script>
+</body>
+</html>

@@ -1,0 +1,332 @@
+/* General Styles */
+:root {
+    --text-color: #333;
+    --bg-color: #fff;
+    --main-color: #ff8c00; /* Main color for text and highlights */
+    --scrolled-bg-color: #ffe4b5; /* Light orange for scrolled state */
+}
+
+/* Basic body styling */
+body {
+    color: var(--text-color);
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar Styles */
+header {
+    position: fixed;
+    height: 15vh; /* Adjust as needed */
+    width: 100vw;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between logo and navbar items */
+    padding: 10px 20px;
+    background-color: var(--bg-color); /* Default background color */
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+header.scrolled {
+    background-color: var(--scrolled-bg-color); /* Light color on scroll */
+}
+
+.navbar {
+    display: flex;
+    gap: 160px; /* Increased space between navbar items */
+    margin-left: 100px; /* Moves the navbar items leftwards */
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--main-color);
+}
+
+.logo-img {
+    width: 50px; /* Adjust as needed */
+    height: auto;
+}
+
+.navbar a {
+    font-size: 1rem;
+    padding: 10px 20px;
+    color: var(--text-color);
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s; /* Smooth transition for text color */
+}
+
+.navbar a:hover {
+    color: var(--main-color); /* Change text color on hover */
+}
+
+/* Ensuring the "Burger Zone" heading is fully visible */
+#menu-icon {
+    display: flex;
+    align-items: center;
+}
+
+#menu-icon .logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#menu-icon .logo-img {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+/* Home Section */
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: #ffeb3b;
+}
+
+.home-text {
+    max-width: 50%;
+}
+
+.home-text h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.home-text h2 {
+    font-size: 24px;
+}
+
+.home-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* About Section */
+.about {
+    padding: 60px 20px;
+    background-color: #fff;
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.about.active {
+    background-color: #ffe4b5; /* Light orange background when active */
+}
+
+.about-text {
+    text-align: center;
+}
+
+.about-text span {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.about-text h2 {
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+/* Menu Section */
+.order {
+    padding: 60px 20px;
+    background-color: #eeeeee;
+}
+
+.heading {
+    text-align: center;
+}
+
+.heading span {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.heading h2 {
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.menu-container .box {
+    width: 30%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 15px 0;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.box-img {
+    position: relative;
+}
+
+.box-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px 0;
+}
+
+.add-button, .remove-button {
+    background: #fff;
+    color: #333;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.add-button:hover, .remove-button:hover {
+    background: #ddd;
+}
+
+.box h2 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.box span {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.box i {
+    font-size: 24px;
+    color: #ff5722;
+}
+
+/* Payment Section */
+.payment {
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+.payment-container {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.login-container {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-container p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.login-container label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+#pay-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#pay-button:hover {
+    background-color: #45a049;
+}
+
+#payment-message {
+    color: green;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* Review Section */
+.review {
+    padding: 60px 20px;
+    background-color: #eeeeee;
+}
+
+.review-container {
+    text-align: center;
+}
+
+.stars {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.star {
+    cursor: pointer;
+    color: #FFD700;
+    transition: color 0.3s ease;
+}
+
+.star:hover {
+    color: #FFBF00;
+}
+
+#submit-rating {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#submit-rating:hover {
+    background-color: #45a049;
+}
+
+#submit-message {
+    color: green;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+#average-rating {
+    font-size: 24px;
+    font-weight: bold;
+}
